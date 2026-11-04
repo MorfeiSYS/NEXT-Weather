@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snowflakes — weather driven</title>
+    <link rel="stylesheet" href="../dist/snow.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 1.5rem;
+        max-width: 40rem;
+      }
+      code {
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Осадки по погоде</h1>
+    <p>
+      Укажите API-ключ и город в конфиге ниже. Снег и сугробы — только при снеге, дождь — при
+      дожде, оба — при мокром снеге. Снегоуборочная машина едет только когда сугробы выросли.
+    </p>
+    <script src="../dist/Snow.min.js"></script>
+    <script>
+      new Snow({
+        countRaindrop: 80,
+        // countRaindrop действует только при режиме rain/sleet (дождь с API).
+        // Для проверки без API: precipitationMode: 'rain' или weather.forceMode: 'rain'
+        weather: {
+          enabled: true,
+          provider: 'weatherapi',
+          apiKey: 'YOUR_WEATHERAPI_KEY',
+          city: 'Sochi',
+          scope: 'now',
+          refreshInterval: 600000,
+        },
+      });
+    </script>
+  </body>
+</html>

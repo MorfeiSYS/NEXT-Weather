@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "licenses": [],
   "description": "Великолепный скрипт падающего снега на сайт на JS+CSS + сугробы!",
-  "author": "Alaev-Co",
+  "author": "MorfeiSYS",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:dist": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-dist.ps1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Alaev-Co/snowflakes.git"
+    "url": "https://github.com/MorfeiSYS/snowflakes.git"
   },
-  "homepage": "https://alaev.info/blog/post/9431",
+  "homepage": "https://github.com/MorfeiSYS/snowflakes",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
     "babel-loader": "^9.1.2",
